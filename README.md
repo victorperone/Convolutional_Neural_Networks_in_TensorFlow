@@ -59,6 +59,7 @@ This repository includes:
 ├── 📁 <a href="https://github.com/victorperone/Convolutional_Neural_Networks_in_TensorFlow/tree/main/Module1_Exploring_a_Larger_Dataset">Module1_Exploring_a_Larger_Dataset</a>
 │   ├── 📓 Course_2_Part_2_Lesson_2_Notebook.ipynb
 │   ├── 📓 Exercise_1_Cats_vs_Dogs_Question-FINAL.ipynb
+│   ├── 🖼️ overfitting_graph.png
 │   ├── 📄 requirements.txt
 │   └── 📄 README.md
 ├── 📁 <a href="https://github.com/victorperone/Convolutional_Neural_Networks_in_TensorFlow/tree/main/Module2_Augmentation-A_Technique_to_Avoid_Overfitting">Module2_Augmentation-A_Technique_to_Avoid_Overfitting</a>
