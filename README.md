@@ -4,8 +4,9 @@
 
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://www.tensorflow.org/) [![Keras](https://img.shields.io/badge/Keras-High%20Level%20API-red.svg)](https://keras.io/) [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 
-Repository that contains my notes, excercises and explanations from the Coursera course **Convolutional Neural Networks in TensorFlow**. 
-It covers CNN fundamentals, image classification, data augmentation, and building models using TensorFlow and Keras.
+This repository documents my implementation and analysis of convolutional neural network architectures built throughout the Coursera course **Convolutional Neural Networks in TensorFlow**.
+
+It covers CNN fundamentals, robust image classification pipelines, data augmentation strategies, and transfer learning techniques using TensorFlow and Keras.
 
 
 🔗 **Course link:**  
@@ -14,9 +15,21 @@ It covers CNN fundamentals, image classification, data augmentation, and buildin
 
 ---
 
+## 🎯 Focus of This Repository
+
+Rather than simply completing course exercises, this repository emphasizes:
+
+- Architectural reasoning
+- Loss-function alignment
+- Overfitting diagnostics
+- Data augmentation strategies
+- Transfer learning implementation
+
+---
+
 ## 📘 Course Overview
 
-This course, which is the second of the DeepLearning.IA TensorFlow Developer Specialization, focuses on advanced techniques for improving the computer vision models developed in [Course 1](https://www.coursera.org/learn/introduction-tensorflow). It covers working with real-world images of different shapes and sizes, visualize an image's journey through convolutions to understand how a computer _"sees"_ information, trace loss and precision, and explore strategies to avoid overfitting, including boosting and dropping. Finally, it introduces learning transfer and how learned features can be extracted and reused across models.
+This course, which is the second of the DeepLearning.AI TensorFlow Developer Specialization, focuses on advanced techniques for improving the computer vision models developed in [Course 1](https://www.coursera.org/learn/introduction-tensorflow). It covers working with real-world images of different shapes and sizes, visualizing an image's journey through convolutions to understand how a computer _"sees"_ information, trace loss and accuracy, and explore strategies to avoid overfitting, including boosting and dropping. Finally, it introduces transfer learning and how learned features can be extracted and reused across models.
 
 Andrew Ng’s Machine Learning and Deep Learning Specialization courses provide a strong foundation in the core principles of machine learning and deep learning. Building on this foundation, the DeepLearning.AI TensorFlow Developer Specialization emphasizes the practical implementation of these principles using TensorFlow, enabling learners to design and deploy scalable models for real-world applications.
 
@@ -32,6 +45,16 @@ My work for that course is available on GitHub [here](https://github.com/victorp
 
 ---
 
+## 💡 Why This Matters
+
+Understanding CNN architecture design, overfitting behavior, and transfer learning is foundational for:
+- Medical imaging
+- Autonomous systems
+- Visual inspection systems
+- Large-scale image classification platforms
+
+---
+
 ## 🛠️ Key Concepts Mastered
 
 | Concept | Description |
@@ -39,7 +62,38 @@ My work for that course is available on GitHub [here](https://github.com/victorp
 | **Data Augmentation** | Artificially expanding datasets by rotating, zooming, and shifting images to prevent overfitting. |
 | **Transfer Learning** | Leveraging pre-trained models (like InceptionV3) to solve tasks with limited data. |
 | **Dropout** | A regularization technique to force network redundancy and robustness. |
-| **Multi-Class Classification** | Moving beyond binary (Cat vs. Dog) to complex tasks (Rock, Paper, Scissors). |
+| **Softmax & Crossentropy Alignment** | Designed multi-class classifiers using proper loss–activation pairing and label encoding strategies. |
+
+---
+
+## 📊 Results & Highlights
+
+- Achieved ~98% training accuracy on augmented Cats vs Dogs dataset
+- Successfully reduced overfitting gap using Dropout + Data Augmentation
+- Implemented Transfer Learning with InceptionV3, reducing training time and improving validation stability.
+- Built a 26-class Sign Language classifier with constrained CNN architecture
+
+---
+
+## 🧠 Engineering Lessons Learned
+
+- Model capacity must scale with dataset complexity
+- Validation metrics matter more than training metrics
+- Loss curves reveal more than accuracy alone
+- Transfer learning drastically reduces required training time
+- Data pipelines are as important as model architecture
+
+---
+
+## 🔭 How This Prepares Me for Real-World ML
+
+This course strengthened my ability to:
+
+- Design scalable image classification systems
+- Diagnose overfitting using training history
+- Choose appropriate loss functions for different tasks
+- Build memory-efficient data pipelines
+- Leverage pretrained models for rapid development
 
 ---
 
@@ -100,8 +154,9 @@ To run the notebooks:
 
 ```bash
 # Clone the repository
-git clone https://github.com/victorperone/Introduction_to_TensorFlow_for_Artificial_Intelligence.git
-cd Introduction_to_TensorFlow_for_Artificial_Intelligence
+git clone https://github.com/victorperone/Convolutional_Neural_Networks_in_TensorFlow.git
+cd Convolutional_Neural_Networks_in_TensorFlow
+
 
 # Install dependencies
 pip install -r requirements.txt
@@ -113,11 +168,13 @@ jupyter notebook
 ---
 
 ## 🛠️ Technologies Used:
-- Python
-- TensorFlow / Keras
+
+- TensorFlow 2.x (Keras API)
+- ImageDataGenerator
+- Transfer Learning (InceptionV3)
 - NumPy
 - Matplotlib
-- Jupyter Notebook
+- Google Colab / Jupyter Notebook
 
 ---
 
