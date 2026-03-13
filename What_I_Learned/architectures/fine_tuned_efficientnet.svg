@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1000" width="100%" height="1000">
+
+<style>
+.layer {fill:#F8F9FA; stroke:#333; stroke-width:2}
+.input {fill:#E3F2FD; stroke:#1E88E5; stroke-width:2}
+.augment {fill:#E0F7FA; stroke:#00838F; stroke-width:2}
+.norm {fill:#EDE7F6; stroke:#5E35B1; stroke-width:2}
+.dropout {fill:#FFF8E1; stroke:#F9A825; stroke-width:2}
+.backbone {fill:#E8EAF6; stroke:#3949AB; stroke-width:2}
+.dense {fill:#FCE4EC; stroke:#C2185B; stroke-width:2}
+.arrow {stroke:#444; stroke-width:2; marker-end:url(#arrow)}
+text {font-family:Arial; font-size:14px}
+</style>
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto">
+<polygon points="0 0, 10 3, 0 6" fill="#444"/>
+</marker>
+</defs>
+
+<!-- Input -->
+<rect class="input" x="150" y="20" width="300" height="60"/>
+<text x="300" y="55" text-anchor="middle">Input (150×150×3)</text>
+
+<line class="arrow" x1="300" y1="80" x2="300" y2="120"/>
+
+<!-- Data Augmentation -->
+<rect class="augment" x="150" y="120" width="300" height="60"/>
+<text x="300" y="155" text-anchor="middle">Data Augmentation</text>
+
+<line class="arrow" x1="300" y1="180" x2="300" y2="220"/>
+
+<!-- Rescaling -->
+<rect class="augment" x="150" y="220" width="300" height="60"/>
+<text x="300" y="255" text-anchor="middle">Rescaling (1./255)</text>
+
+<line class="arrow" x1="300" y1="280" x2="300" y2="320"/>
+
+<!-- Pretrained Backbone (Fine-tuned) -->
+<rect class="backbone" x="120" y="320" width="360" height="140"/>
+<text x="300" y="360" text-anchor="middle">Pretrained CNN Backbone</text>
+<text x="300" y="385" text-anchor="middle">(EfficientNet / MobileNet / ResNet)</text>
+<text x="300" y="410" text-anchor="middle">Top layers unfrozen (trainable)</text>
+
+<line class="arrow" x1="300" y1="460" x2="300" y2="500"/>
+
+<!-- Global Average Pooling -->
+<rect class="layer" x="150" y="500" width="300" height="60"/>
+<text x="300" y="535" text-anchor="middle">GlobalAveragePooling2D</text>
+
+<line class="arrow" x1="300" y1="560" x2="300" y2="600"/>
+
+<!-- BatchNorm -->
+<rect class="norm" x="150" y="600" width="300" height="60"/>
+<text x="300" y="635" text-anchor="middle">BatchNormalization</text>
+
+<line class="arrow" x1="300" y1="660" x2="300" y2="700"/>
+
+<!-- Dense -->
+<rect class="dense" x="150" y="700" width="300" height="60"/>
+<text x="300" y="735" text-anchor="middle">Dense 128 • ReLU</text>
+
+<line class="arrow" x1="300" y1="760" x2="300" y2="800"/>
+
+<!-- Dropout -->
+<rect class="dropout" x="150" y="800" width="300" height="60"/>
+<text x="300" y="835" text-anchor="middle">Dropout (0.5)</text>
+
+<line class="arrow" x1="300" y1="860" x2="300" y2="900"/>
+
+<!-- Output -->
+<rect class="dense" x="150" y="900" width="300" height="70"/>
+<text x="300" y="930" text-anchor="middle">Dense</text>
+<text x="300" y="950" text-anchor="middle">6 classes • Softmax</text>
+
+</svg>

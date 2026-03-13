@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200" width="100%" height="1200">
+
+<style>
+.layer {fill:#F8F9FA; stroke:#333; stroke-width:2}
+.input {fill:#E3F2FD; stroke:#1E88E5; stroke-width:2}
+.conv {fill:#E8F5E9; stroke:#2E7D32; stroke-width:2}
+.pool {fill:#FFF3E0; stroke:#EF6C00; stroke-width:2}
+.dense {fill:#FCE4EC; stroke:#C2185B; stroke-width:2}
+.augment {fill:#E0F7FA; stroke:#00838F; stroke-width:2}
+.noise {fill:#FFF9C4; stroke:#F9A825; stroke-width:2}
+.arrow {stroke:#444; stroke-width:2; marker-end:url(#arrow)}
+text {font-family:Arial; font-size:14px}
+</style>
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto">
+<polygon points="0 0, 10 3, 0 6" fill="#444"/>
+</marker>
+</defs>
+
+<!-- Input -->
+<rect class="input" x="150" y="20" width="300" height="60"/>
+<text x="300" y="55" text-anchor="middle">Input (150×150×3)</text>
+
+<line class="arrow" x1="300" y1="80" x2="300" y2="120"/>
+
+<!-- Data Augmentation -->
+<rect class="augment" x="150" y="120" width="300" height="60"/>
+<text x="300" y="155" text-anchor="middle">Data Augmentation</text>
+
+<line class="arrow" x1="300" y1="180" x2="300" y2="220"/>
+
+<!-- Rescaling -->
+<rect class="augment" x="150" y="220" width="300" height="60"/>
+<text x="300" y="255" text-anchor="middle">Rescaling (1./255)</text>
+
+<line class="arrow" x1="300" y1="280" x2="300" y2="320"/>
+
+<!-- Gaussian Noise -->
+<rect class="noise" x="150" y="320" width="300" height="60"/>
+<text x="300" y="355" text-anchor="middle">GaussianNoise (0.05)</text>
+
+<line class="arrow" x1="300" y1="380" x2="300" y2="420"/>
+
+<!-- Conv1 -->
+<rect class="conv" x="150" y="420" width="300" height="70"/>
+<text x="300" y="450" text-anchor="middle">Conv2D</text>
+<text x="300" y="470" text-anchor="middle">32 filters • 3×3 • ReLU</text>
+
+<line class="arrow" x1="300" y1="490" x2="300" y2="530"/>
+
+<!-- Pool1 -->
+<rect class="pool" x="150" y="530" width="300" height="60"/>
+<text x="300" y="565" text-anchor="middle">MaxPooling2D (2×2)</text>
+
+<line class="arrow" x1="300" y1="590" x2="300" y2="630"/>
+
+<!-- Conv2 -->
+<rect class="conv" x="150" y="630" width="300" height="70"/>
+<text x="300" y="660" text-anchor="middle">Conv2D</text>
+<text x="300" y="680" text-anchor="middle">64 filters • 3×3 • ReLU</text>
+
+<line class="arrow" x1="300" y1="700" x2="300" y2="740"/>
+
+<!-- Pool2 -->
+<rect class="pool" x="150" y="740" width="300" height="60"/>
+<text x="300" y="775" text-anchor="middle">MaxPooling2D (2×2)</text>
+
+<line class="arrow" x1="300" y1="800" x2="300" y2="840"/>
+
+<!-- Flatten -->
+<rect class="layer" x="150" y="840" width="300" height="60"/>
+<text x="300" y="875" text-anchor="middle">Flatten</text>
+
+<line class="arrow" x1="300" y1="900" x2="300" y2="940"/>
+
+<!-- Dense -->
+<rect class="dense" x="150" y="940" width="300" height="70"/>
+<text x="300" y="970" text-anchor="middle">Dense</text>
+<text x="300" y="990" text-anchor="middle">128 units • ReLU</text>
+
+<line class="arrow" x1="300" y1="1010" x2="300" y2="1050"/>
+
+<!-- Output -->
+<rect class="dense" x="150" y="1050" width="300" height="70"/>
+<text x="300" y="1080" text-anchor="middle">Dense</text>
+<text x="300" y="1100" text-anchor="middle">6 classes • Softmax</text>
+
+</svg>

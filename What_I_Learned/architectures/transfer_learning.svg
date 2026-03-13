@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200" width="100%" height="1200">
+
+<style>
+.layer {fill:#F8F9FA; stroke:#333; stroke-width:2}
+.input {fill:#E3F2FD; stroke:#1E88E5; stroke-width:2}
+.conv {fill:#E8F5E9; stroke:#2E7D32; stroke-width:2}
+.pool {fill:#FFF3E0; stroke:#EF6C00; stroke-width:2}
+.dense {fill:#FCE4EC; stroke:#C2185B; stroke-width:2}
+.augment {fill:#E0F7FA; stroke:#00838F; stroke-width:2}
+.norm {fill:#EDE7F6; stroke:#5E35B1; stroke-width:2}
+.dropout {fill:#FFF8E1; stroke:#F9A825; stroke-width:2}
+.backbone {fill:#E8EAF6; stroke:#3949AB; stroke-width:2}
+.arrow {stroke:#444; stroke-width:2; marker-end:url(#arrow)}
+text {font-family:Arial; font-size:14px}
+</style>
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto">
+<polygon points="0 0, 10 3, 0 6" fill="#444"/>
+</marker>
+</defs>
+
+<!-- Input -->
+<rect class="input" x="150" y="20" width="300" height="60"/>
+<text x="300" y="55" text-anchor="middle">Input (150×150×3)</text>
+
+<line class="arrow" x1="300" y1="80" x2="300" y2="120"/>
+
+<!-- Data Augmentation -->
+<rect class="augment" x="150" y="120" width="300" height="60"/>
+<text x="300" y="155" text-anchor="middle">Data Augmentation</text>
+
+<line class="arrow" x1="300" y1="180" x2="300" y2="220"/>
+
+<!-- Rescaling -->
+<rect class="augment" x="150" y="220" width="300" height="60"/>
+<text x="300" y="255" text-anchor="middle">Rescaling (1./255)</text>
+
+<line class="arrow" x1="300" y1="280" x2="300" y2="320"/>
+
+<!-- Pretrained Backbone -->
+<rect class="backbone" x="120" y="320" width="360" height="120"/>
+<text x="300" y="360" text-anchor="middle">Pretrained CNN Backbone</text>
+<text x="300" y="385" text-anchor="middle">(EfficientNet / MobileNet / ResNet)</text>
+<text x="300" y="410" text-anchor="middle">Frozen Weights</text>
+
+<line class="arrow" x1="300" y1="440" x2="300" y2="480"/>
+
+<!-- Global Pooling -->
+<rect class="pool" x="150" y="480" width="300" height="60"/>
+<text x="300" y="515" text-anchor="middle">GlobalAveragePooling2D</text>
+
+<line class="arrow" x1="300" y1="540" x2="300" y2="580"/>
+
+<!-- BatchNorm -->
+<rect class="norm" x="150" y="580" width="300" height="60"/>
+<text x="300" y="615" text-anchor="middle">BatchNormalization</text>
+
+<line class="arrow" x1="300" y1="640" x2="300" y2="680"/>
+
+<!-- Dense -->
+<rect class="dense" x="150" y="680" width="300" height="60"/>
+<text x="300" y="715" text-anchor="middle">Dense 128 • ReLU</text>
+
+<line class="arrow" x1="300" y1="740" x2="300" y2="780"/>
+
+<!-- Dropout -->
+<rect class="dropout" x="150" y="780" width="300" height="60"/>
+<text x="300" y="815" text-anchor="middle">Dropout (0.5)</text>
+
+<line class="arrow" x1="300" y1="840" x2="300" y2="880"/>
+
+<!-- Output -->
+<rect class="dense" x="150" y="880" width="300" height="70"/>
+<text x="300" y="910" text-anchor="middle">Dense</text>
+<text x="300" y="930" text-anchor="middle">6 classes • Softmax</text>
+
+</svg>
