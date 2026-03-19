@@ -2,7 +2,7 @@
 
 > **Advanced Computer Vision:** From Overfitting to Transfer Learning.
 
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://www.tensorflow.org/) [![Keras](https://img.shields.io/badge/Keras-High%20Level%20API-red.svg)](https://keras.io/) [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://www.tensorflow.org/) [![Keras](https://img.shields.io/badge/Keras-High%20Level%20API-red.svg)](https://keras.io/) [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/) ![Status](https://img.shields.io/badge/Status-Complete-success.svg)
 
 This repository documents my implementation and analysis of convolutional neural network architectures built throughout the Coursera course **Convolutional Neural Networks in TensorFlow**.
 
@@ -115,35 +115,61 @@ This repository includes:
 │   ├── 📓 Exercise_1_Cats_vs_Dogs_Question-FINAL.ipynb
 │   ├── 🖼️ overfitting_graph.png
 │   ├── 📄 requirements.txt
-│   └── 📄 README.md
+│   └── 📘 README.md
 ├── 📁 <a href="https://github.com/victorperone/Convolutional_Neural_Networks_in_TensorFlow/tree/main/Module2_Augmentation-A_Technique_to_Avoid_Overfitting">Module2_Augmentation-A_Technique_to_Avoid_Overfitting</a>
-│   ├── 📓 Course_1_Part_4_Lesson_2_Notebook.ipynb
+│   ├── 📓 Course_2_Part_4_Lesson_2_Notebook_(Cats_v_Dogs_Augmentation).ipynb
+│   ├── 📓 Course_2_Part_4_Lesson_4_Notebook.ipynb
+│   ├── 📓 Exercise_2_Cats_vs_Dogs_using_augmentation_Question-FINAL.ipynb
 │   ├── 📄 requirements.txt
-│   └── 📄 README.md
+│   └── 📘 README.md
 ├── 📁 <a href="https://github.com/victorperone/Convolutional_Neural_Networks_in_TensorFlow/tree/main/Module3_Transfer_Learning">Module3_Transfer_Learning</a>
-│   ├── 📓 Course_1_Part_6_Lesson_2_Notebook.ipynb
-│   ├── 📓 Course_1_Part_6_Lesson_2_Notebook.ipynb
-│   ├── 📓 Course_1_Part_6_Lesson_3_Notebook.ipynb
+│   ├── 📓 Course_2_Part_6_Lesson_3_Notebook.ipynb
+│   ├── 📓 Exercise_3_Horses_vs_humans_using_Transfer_Learning_Question-FINAL.ipynb
 │   ├── 📄 requirements.txt
-│   └── 📄 README.md
+│   └── 📘 README.md
 ├── 📁 <a href="https://github.com/victorperone/Convolutional_Neural_Networks_in_TensorFlow/tree/main/Module4_Multiclass_Classifications">Module4_Multiclass_Classifications</a>
-│   ├── 📓 Course_1_Part_8_Lesson_2_Notebook_Horses_Humans_Convet.ipynb
-│   ├── 📓 Course_1_Part_8_Lesson_3_Notebook_Horses_Humans_with_Validation.ipynb
-│   ├── 📓 Course_1_Part_8_Lesson_4_Notebook_Horses_Humans_Compact_Images.ipynb
-│   ├── 📓 Semana_4_Exercicio.ipynb
-│   ├── 📄 Exercise4-Question.json
+│   ├── 📓 Course_2_Part_8_Lesson_2_Notebook_(RockPaperScissors).ipynb
+│   ├── 📓 Exercise_4_Multi_class_classifier_Question-FINAL.ipynb
+│   ├── 🗜️ sign_language_mnist.zip
 │   ├── 📄 requirements.txt
-│   └── 📄 README.md
-│   └── 📁 datasets/
+│   └── 📘 README.md
 ├── 📁 <a href="https://github.com/victorperone/Convolutional_Neural_Networks_in_TensorFlow/tree/main/What_I_Learned">What_I_Learned</a>
-│   ├── 📓 Introduction_to_TensorFlow_Wrap_Up.ipynb
-│   ├── 📓 Introduction_to_TensorFlow_Wrap_Up.ipynb
-│   ├── 🧠🤖 my_horse_human_model.h5
-│   ├── 🧠🤖 my_horse_human_model.keras
-│   ├── 🖼️ Horse_test_image.png
-│   ├── 🖼️ Human_test_image.png
-│   └── 📄 README.md
-└── 📄 README.md
+│   ├── 📁 notebooks
+│   │ └── 📓 Introduction_to_TensorFlow_Wrap_Up.ipynb
+│   │      └─ Final notebook summarizing TensorFlow concepts and experiments
+│   ├── 📁 architectures
+│   │     ├── 🏗️ baseline_cnn.svg
+│   │     ├── 🏗️ baseline_cnn_layout.svg
+│   │     ├── 🏗️ cnn_dropout.svg
+│   │     ├── 🏗️ cnn_augmentation.svg
+│   │     ├── 🏗️ improved_cnn_layout.svg
+│   │     ├── 🏗️ improved_cnn.svg
+│   │     ├── 🏗️ transfer_learning.svg
+│   │     └── 🏗️ fine_tuned_efficientnet.svg
+│   │          └─ Visual diagrams of the CNN architectures explored in the project
+│   ├── 📁 results
+│   │     ├── 🖼️ confusion_matrix_baseline_dropout_augmentation.png
+│   │     └── 🖼️ confusion_matrix_advanced_models.png
+│   │          └─ Evaluation results and confusion matrices for model comparisons
+│   ├── 📄 requirements.txt
+│   │     └─ Python dependencies required to run the notebooks
+│   └── 📘 README.md
+│        └─ Documentation and overview of the folder
+└── 📘 README.md
+
+</pre>
+
+Legend:
+
+<pre>
+📁 Folder
+📓 Jupyter Notebook
+🐍 Python Script
+🏗️ Model Architecture / Diagram (.svg)
+🖼 Results / Plots (.png)
+🗜️ Compressed Dataset (.zip)
+📄 Configuration File
+📘 Documentation
 </pre>
 
 ---
@@ -174,6 +200,7 @@ jupyter notebook
 - Transfer Learning (InceptionV3)
 - NumPy
 - Matplotlib
+- Pandas
 - Google Colab / Jupyter Notebook
 
 ---
